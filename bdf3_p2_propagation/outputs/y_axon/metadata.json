@@ -1,0 +1,128 @@
+{
+  "config": {
+    "dt": 0.02,
+    "final_time": 76.0,
+    "sample_interval": 0.1,
+    "epsilon": 0.001,
+    "voltage_limit": 200.0,
+    "stimulus_amplitude": 100.0
+  },
+  "parameters": {
+    "capacitance": 1.0,
+    "radius": 0.01,
+    "resistivity": 35.4,
+    "g_na": 120.0,
+    "g_k": 36.0,
+    "g_l": 0.3,
+    "e_na": 115.0,
+    "e_k": -12.0,
+    "e_l": null
+  },
+  "leak_reversal_used": 10.598920969391683,
+  "mesh": {
+    "vertices": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0
+      ],
+      [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ]
+    ],
+    "edges": [
+      {
+        "start": 0,
+        "end": 1,
+        "name": "trunk",
+        "length": null
+      },
+      {
+        "start": 1,
+        "end": 2,
+        "name": "upper",
+        "length": null
+      },
+      {
+        "start": 1,
+        "end": 3,
+        "name": "lower",
+        "length": null
+      }
+    ],
+    "elements_per_edge": [
+      100,
+      100,
+      100
+    ],
+    "edge_lengths": [
+      1.0,
+      0.9999999999999999,
+      0.9999999999999999
+    ],
+    "dofs": 601,
+    "quadrature_order": 24,
+    "h_max": 0.01
+  },
+  "diagnostics": {
+    "gate_mask_steps": 16,
+    "masked_quadrature_values": 74,
+    "voltage_cutoff_steps": 0,
+    "cutoff_nodal_values": 0,
+    "min_conductance": 0.6332274156373245,
+    "extrapolated_gate_range_at_quadrature": [
+      0.013537245489635382,
+      1.0089341906861873
+    ],
+    "max_relative_linear_residual": 2.716701531988489e-16,
+    "steps": 3800,
+    "bdf3_solves": 3798,
+    "elapsed_seconds": 20.523762700147927,
+    "voltage_nodal_range": [
+      -11.199713147957711,
+      106.25793644304471
+    ],
+    "gate_nodal_ranges": [
+      [
+        0.013538548733953519,
+        0.9946459561400407
+      ],
+      [
+        0.07558172390749772,
+        0.6105609726854975
+      ],
+      [
+        0.3082699618205591,
+        0.7721289332008697
+      ]
+    ]
+  },
+  "gate_order": [
+    "m",
+    "h",
+    "n"
+  ],
+  "history_axes": {
+    "voltage": [
+      "sample",
+      "node"
+    ],
+    "gates": [
+      "sample",
+      "gate",
+      "node"
+    ]
+  }
+}

@@ -1,0 +1,951 @@
+{
+  "status": "approved_protocol",
+  "problem": "physical HH Y graph, no manufactured forcing",
+  "final_time_ms": 46,
+  "snapshot_times_ms": [
+    0,
+    46
+  ],
+  "repeats_per_case": 3,
+  "seed": 20261028,
+  "workers": 1,
+  "fresh_process_per_measurement": true,
+  "optimized_mask": "hh_convergence.gate_mask_fast_path, with original fallback",
+  "optimized_mask_module_sha256": "581ebce7d14105b35dbee2c403797efed22ffdcccc1c0bdb18c37500659be559",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "warmup": {
+    "bdf_order": 2,
+    "degree": 1,
+    "elements_per_branch": 20,
+    "dt_ms": 0.01,
+    "final_time_ms": 0.5,
+    "quadrature": 24,
+    "timed": false
+  },
+  "timing": {
+    "primary": "solve_wall_seconds: mesh construction through solver return",
+    "secondary": [
+      "solve_cpu_seconds: matching process CPU interval",
+      "loop_wall_seconds: solver diagnostics.elapsed_seconds"
+    ],
+    "excluded": [
+      "imports",
+      "warmup",
+      "reference loading",
+      "field saving",
+      "error analysis",
+      "plotting"
+    ],
+    "aggregation": "median of three fresh serial solves; retain min, max and relative span"
+  },
+  "quadrature": {
+    "assembly": 24,
+    "control": 40,
+    "error_norm": 8,
+    "error_norm_check": 16,
+    "proposed_control_fraction_of_error": 0.01,
+    "control_in_primary_timing": false,
+    "controls": "finest candidate of each pair, all other masked candidates, plus reference"
+  },
+  "reference": {
+    "bdf_order": 5,
+    "degree": 4,
+    "elements_per_branch": 1280,
+    "dt_ms": 0.00078125,
+    "assembly_quadrature": 24,
+    "store": "studies/hh_convergence/results/final46_reference1280",
+    "read_only": true,
+    "caveat": "finite numerical reference; flag empirical neighboring-reference indicators above 5% of candidate error; never use self-comparison"
+  },
+  "chart": {
+    "x": "median solve_wall_seconds",
+    "y": "absolute voltage L2 error at 46 ms",
+    "axes": "log-log",
+    "secondary": "separate maximum gate L2 plot"
+  },
+  "cases": [
+    {
+      "case": "BDF2_P1_N80",
+      "scheme": "BDF2/P1",
+      "bdf_order": 2,
+      "degree": 1,
+      "elements_per_branch": 80,
+      "h_cm": 0.0125,
+      "dt_ms": 0.0125,
+      "assembly_quadrature": 24,
+      "dofs": 241,
+      "historical_loop_wall_seconds": 8.637632999918424,
+      "historical_voltage_l2_error": 39.16178100175876,
+      "historical_gate_l2_error": 0.4453147871887067,
+      "historical_mask_evaluation": "not recorded",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf2_p1/runs/bdf2_p1_n80_dt0.0125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf2_p1/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "efc311bb8fdfd4a654b3c4c485a0f33d5595887fc2039dae6fc8ada082f09010",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF2_P1_N160",
+      "scheme": "BDF2/P1",
+      "bdf_order": 2,
+      "degree": 1,
+      "elements_per_branch": 160,
+      "h_cm": 0.00625,
+      "dt_ms": 0.00625,
+      "assembly_quadrature": 24,
+      "dofs": 481,
+      "historical_loop_wall_seconds": 34.95531109999865,
+      "historical_voltage_l2_error": 28.25892500626289,
+      "historical_gate_l2_error": 0.2981633025481493,
+      "historical_mask_evaluation": "not recorded",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf2_p1/runs/bdf2_p1_n160_dt0.00625_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf2_p1/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "5f19210e897e31a879536dd3e691829a981051cb01656bfcaaa3253f88d785ab",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF2_P1_N320",
+      "scheme": "BDF2/P1",
+      "bdf_order": 2,
+      "degree": 1,
+      "elements_per_branch": 320,
+      "h_cm": 0.003125,
+      "dt_ms": 0.003125,
+      "assembly_quadrature": 24,
+      "dofs": 961,
+      "historical_loop_wall_seconds": 137.3133132000221,
+      "historical_voltage_l2_error": 9.314188308559217,
+      "historical_gate_l2_error": 0.09338308241516197,
+      "historical_mask_evaluation": "not recorded",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf2_p1/fine/runs/bdf2_p1_n320_dt0.003125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf2_p1/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "7a7acb9b5c896f261682f8a5003a8b30996a05a756e5d1b4dfa05000b7233146",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF2_P1_N640",
+      "scheme": "BDF2/P1",
+      "bdf_order": 2,
+      "degree": 1,
+      "elements_per_branch": 640,
+      "h_cm": 0.0015625,
+      "dt_ms": 0.0015625,
+      "assembly_quadrature": 24,
+      "dofs": 1921,
+      "historical_loop_wall_seconds": 698.8135501000797,
+      "historical_voltage_l2_error": 2.3901451401055693,
+      "historical_gate_l2_error": 0.023940064761830054,
+      "historical_mask_evaluation": "not recorded",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf2_p1/fine/runs/bdf2_p1_n640_dt0.0015625_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf2_p1/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "1be00a16a8c67be30fdb80ca0d3d8dfc6964c98b59e317bccefa9df9987fb0d0",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF2_P1_N1280",
+      "scheme": "BDF2/P1",
+      "bdf_order": 2,
+      "degree": 1,
+      "elements_per_branch": 1280,
+      "h_cm": 0.00078125,
+      "dt_ms": 0.00078125,
+      "assembly_quadrature": 24,
+      "dofs": 3841,
+      "historical_loop_wall_seconds": 444.95460810000077,
+      "historical_voltage_l2_error": 0.5968525800481661,
+      "historical_gate_l2_error": 0.005979295042435054,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": true,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf2_p1/fine/runs/bdf2_p1_n1280_dt0.00078125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf2_p1/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "ca98cbc3550fda72574bb13f8cb393daf0e8bd71f112b2a4759b81cc5053355e",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF3_P2_N80",
+      "scheme": "BDF3/P2",
+      "bdf_order": 3,
+      "degree": 2,
+      "elements_per_branch": 80,
+      "h_cm": 0.0125,
+      "dt_ms": 0.0125,
+      "assembly_quadrature": 24,
+      "dofs": 481,
+      "historical_loop_wall_seconds": 4.790041700005531,
+      "historical_voltage_l2_error": 21.45705269111725,
+      "historical_gate_l2_error": 0.22040529426693795,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 36,
+      "quadrature_check_required": true,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf3_p2/runs/bdf3_p2_n80_dt0.0125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf3_p2/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "f96b9807738c37b9b595bed26a7694cb99819af02ea4d7904ec8f0e2efc3481b",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF3_P2_N160",
+      "scheme": "BDF3/P2",
+      "bdf_order": 3,
+      "degree": 2,
+      "elements_per_branch": 160,
+      "h_cm": 0.00625,
+      "dt_ms": 0.00625,
+      "assembly_quadrature": 24,
+      "dofs": 961,
+      "historical_loop_wall_seconds": 16.723006100044586,
+      "historical_voltage_l2_error": 2.34687438444098,
+      "historical_gate_l2_error": 0.02349455927894597,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf3_p2/runs/bdf3_p2_n160_dt0.00625_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf3_p2/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "4f0410968dcfdea713dfd58aa1887bba0fc1123cb52604ca9a18d32c4681e7cb",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF3_P2_N320",
+      "scheme": "BDF3/P2",
+      "bdf_order": 3,
+      "degree": 2,
+      "elements_per_branch": 320,
+      "h_cm": 0.003125,
+      "dt_ms": 0.003125,
+      "assembly_quadrature": 24,
+      "dofs": 1921,
+      "historical_loop_wall_seconds": 48.39997939998284,
+      "historical_voltage_l2_error": 0.16159335662405808,
+      "historical_gate_l2_error": 0.0016166650805881388,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf3_p2/runs/bdf3_p2_n320_dt0.003125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf3_p2/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "f8671302b7a96727e958571920ae9907d203ea96cbff81bdfefe632a78910077",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF3_P2_N640",
+      "scheme": "BDF3/P2",
+      "bdf_order": 3,
+      "degree": 2,
+      "elements_per_branch": 640,
+      "h_cm": 0.0015625,
+      "dt_ms": 0.0015625,
+      "assembly_quadrature": 24,
+      "dofs": 3841,
+      "historical_loop_wall_seconds": 177.3361335999798,
+      "historical_voltage_l2_error": 0.010436898749148833,
+      "historical_gate_l2_error": 0.00010446632765586278,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf3_p2/runs/bdf3_p2_n640_dt0.0015625_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf3_p2/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "8fbbd956821a211c65f45cfb0dc2039974a3ffba36afc4b87f3ce691ec493de5",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF3_P2_N1280",
+      "scheme": "BDF3/P2",
+      "bdf_order": 3,
+      "degree": 2,
+      "elements_per_branch": 1280,
+      "h_cm": 0.00078125,
+      "dt_ms": 0.00078125,
+      "assembly_quadrature": 24,
+      "dofs": 7681,
+      "historical_loop_wall_seconds": 568.8814856000245,
+      "historical_voltage_l2_error": 0.0006742707674459272,
+      "historical_gate_l2_error": 6.763992162966834e-06,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": true,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf3_p2/fine/runs/bdf3_p2_n1280_dt0.00078125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf3_p2/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "d0bbdf9c0ec336e3d87e7fdc3907569d00978cb6228c3136d53d0ecf480e82ad",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF4_P3_N80",
+      "scheme": "BDF4/P3",
+      "bdf_order": 4,
+      "degree": 3,
+      "elements_per_branch": 80,
+      "h_cm": 0.0125,
+      "dt_ms": 0.0125,
+      "assembly_quadrature": 24,
+      "dofs": 721,
+      "historical_loop_wall_seconds": 5.954784199944697,
+      "historical_voltage_l2_error": 4.571055197010291,
+      "historical_gate_l2_error": 0.0457053751218691,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf4_p3/runs/bdf4_p3_n80_dt0.0125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf4_p3/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "e3af00a15f2de0d87ddebed88cbb23d0c3bb0224f56286ca1771ddb445cc855a",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF4_P3_N160",
+      "scheme": "BDF4/P3",
+      "bdf_order": 4,
+      "degree": 3,
+      "elements_per_branch": 160,
+      "h_cm": 0.00625,
+      "dt_ms": 0.00625,
+      "assembly_quadrature": 24,
+      "dofs": 1441,
+      "historical_loop_wall_seconds": 18.637370600015856,
+      "historical_voltage_l2_error": 0.12887880425068907,
+      "historical_gate_l2_error": 0.0012884273802330139,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf4_p3/runs/bdf4_p3_n160_dt0.00625_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf4_p3/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "4644be6568379f70eec03ca75b8d942b12b9d2511c8e8b412a86444d112386dc",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF4_P3_N320",
+      "scheme": "BDF4/P3",
+      "bdf_order": 4,
+      "degree": 3,
+      "elements_per_branch": 320,
+      "h_cm": 0.003125,
+      "dt_ms": 0.003125,
+      "assembly_quadrature": 24,
+      "dofs": 2881,
+      "historical_loop_wall_seconds": 60.391447300091386,
+      "historical_voltage_l2_error": 0.002464361364620155,
+      "historical_gate_l2_error": 2.4901956595146487e-05,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf4_p3/runs/bdf4_p3_n320_dt0.003125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf4_p3/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "198014bc20cbe03f3366b53173fc37d42c24ec953795135d1f440bb157c3917d",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF4_P3_N640",
+      "scheme": "BDF4/P3",
+      "bdf_order": 4,
+      "degree": 3,
+      "elements_per_branch": 640,
+      "h_cm": 0.0015625,
+      "dt_ms": 0.0015625,
+      "assembly_quadrature": 24,
+      "dofs": 5761,
+      "historical_loop_wall_seconds": 259.0675879000919,
+      "historical_voltage_l2_error": 6.221825591282645e-05,
+      "historical_gate_l2_error": 6.55359129307337e-07,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf4_p3/runs/bdf4_p3_n640_dt0.0015625_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf4_p3/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "29f699c8d346809d9d8dc2205ca430181263db3358ec73d8764b34e49e9130d7",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF4_P3_N1280",
+      "scheme": "BDF4/P3",
+      "bdf_order": 4,
+      "degree": 3,
+      "elements_per_branch": 1280,
+      "h_cm": 0.00078125,
+      "dt_ms": 0.00078125,
+      "assembly_quadrature": 24,
+      "dofs": 11521,
+      "historical_loop_wall_seconds": 717.2547288000351,
+      "historical_voltage_l2_error": 3.0330857750271487e-06,
+      "historical_gate_l2_error": 3.302054984937276e-08,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": true,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf4_p3/fine/runs/bdf4_p3_n1280_dt0.00078125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf4_p3/combined_grids.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "8bbd689e23de8200af0602eabe52d765a8c011a3d6bcb012cd39920509daf206",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF5_P4_N80",
+      "scheme": "BDF5/P4",
+      "bdf_order": 5,
+      "degree": 4,
+      "elements_per_branch": 80,
+      "h_cm": 0.0125,
+      "dt_ms": 0.0125,
+      "assembly_quadrature": 24,
+      "dofs": 961,
+      "historical_loop_wall_seconds": 5.6072759999660775,
+      "historical_voltage_l2_error": 0.7182288545884852,
+      "historical_gate_l2_error": 0.007153667497753979,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf5_p4/runs/bdf5_p4_n80_dt0.0125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf5_p4/joint_bdf5_p4.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "a390bc832f61be15b77587a1f0d74784c8cce895476120f1ec0cc531f7f1f4e4",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF5_P4_N160",
+      "scheme": "BDF5/P4",
+      "bdf_order": 5,
+      "degree": 4,
+      "elements_per_branch": 160,
+      "h_cm": 0.00625,
+      "dt_ms": 0.00625,
+      "assembly_quadrature": 24,
+      "dofs": 1921,
+      "historical_loop_wall_seconds": 15.57365779997781,
+      "historical_voltage_l2_error": 0.006723921761085559,
+      "historical_gate_l2_error": 6.783525889735839e-05,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf5_p4/runs/bdf5_p4_n160_dt0.00625_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf5_p4/joint_bdf5_p4.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "29603b917adc8dbb029501fa7b2fdf2056f768d890a794b1bb7585e292f75251",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF5_P4_N320",
+      "scheme": "BDF5/P4",
+      "bdf_order": 5,
+      "degree": 4,
+      "elements_per_branch": 320,
+      "h_cm": 0.003125,
+      "dt_ms": 0.003125,
+      "assembly_quadrature": 24,
+      "dofs": 3841,
+      "historical_loop_wall_seconds": 48.91741330001969,
+      "historical_voltage_l2_error": 7.687458102616442e-05,
+      "historical_gate_l2_error": 7.846296882037746e-07,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": false,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf5_p4/runs/bdf5_p4_n320_dt0.003125_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf5_p4/joint_bdf5_p4.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "19c339559a3b7e0193b95ab3b22a9ad538ba0dd395e78619a67ecafa39d06ee0",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "BDF5_P4_N640",
+      "scheme": "BDF5/P4",
+      "bdf_order": 5,
+      "degree": 4,
+      "elements_per_branch": 640,
+      "h_cm": 0.0015625,
+      "dt_ms": 0.0015625,
+      "assembly_quadrature": 24,
+      "dofs": 7681,
+      "historical_loop_wall_seconds": 212.01864969998132,
+      "historical_voltage_l2_error": 2.097214292687207e-06,
+      "historical_gate_l2_error": 2.3118773125811164e-08,
+      "historical_mask_evaluation": "exact identity fast path; original full-array regularization otherwise",
+      "historical_masked_steps": 0,
+      "quadrature_check_required": true,
+      "historical_metadata": "studies/hh_convergence/results/final46_bdf5_p4/runs/bdf5_p4_n640_dt0.0015625_q24/metadata.json",
+      "historical_error_table": "studies/hh_convergence/results/final46_bdf5_p4/joint_bdf5_p4.csv",
+      "numerical_source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+      "metadata_sha256": "d6964d1029bab7efaf575cfc4980f73a1c50bfcec69a28f29f23a3de5a85487c",
+      "controlled_wall_seconds": [
+        null,
+        null,
+        null
+      ],
+      "controlled_cpu_seconds": [
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "schedule": [
+    {
+      "sequence": 1,
+      "repeat": 1,
+      "case": "BDF4_P3_N320"
+    },
+    {
+      "sequence": 2,
+      "repeat": 1,
+      "case": "BDF5_P4_N80"
+    },
+    {
+      "sequence": 3,
+      "repeat": 1,
+      "case": "BDF3_P2_N1280"
+    },
+    {
+      "sequence": 4,
+      "repeat": 1,
+      "case": "BDF5_P4_N160"
+    },
+    {
+      "sequence": 5,
+      "repeat": 1,
+      "case": "BDF4_P3_N80"
+    },
+    {
+      "sequence": 6,
+      "repeat": 1,
+      "case": "BDF3_P2_N80"
+    },
+    {
+      "sequence": 7,
+      "repeat": 1,
+      "case": "BDF4_P3_N160"
+    },
+    {
+      "sequence": 8,
+      "repeat": 1,
+      "case": "BDF4_P3_N640"
+    },
+    {
+      "sequence": 9,
+      "repeat": 1,
+      "case": "BDF2_P1_N640"
+    },
+    {
+      "sequence": 10,
+      "repeat": 1,
+      "case": "BDF4_P3_N1280"
+    },
+    {
+      "sequence": 11,
+      "repeat": 1,
+      "case": "BDF2_P1_N80"
+    },
+    {
+      "sequence": 12,
+      "repeat": 1,
+      "case": "BDF2_P1_N1280"
+    },
+    {
+      "sequence": 13,
+      "repeat": 1,
+      "case": "BDF2_P1_N320"
+    },
+    {
+      "sequence": 14,
+      "repeat": 1,
+      "case": "BDF3_P2_N640"
+    },
+    {
+      "sequence": 15,
+      "repeat": 1,
+      "case": "BDF3_P2_N320"
+    },
+    {
+      "sequence": 16,
+      "repeat": 1,
+      "case": "BDF5_P4_N640"
+    },
+    {
+      "sequence": 17,
+      "repeat": 1,
+      "case": "BDF3_P2_N160"
+    },
+    {
+      "sequence": 18,
+      "repeat": 1,
+      "case": "BDF2_P1_N160"
+    },
+    {
+      "sequence": 19,
+      "repeat": 1,
+      "case": "BDF5_P4_N320"
+    },
+    {
+      "sequence": 20,
+      "repeat": 2,
+      "case": "BDF4_P3_N320"
+    },
+    {
+      "sequence": 21,
+      "repeat": 2,
+      "case": "BDF3_P2_N640"
+    },
+    {
+      "sequence": 22,
+      "repeat": 2,
+      "case": "BDF5_P4_N80"
+    },
+    {
+      "sequence": 23,
+      "repeat": 2,
+      "case": "BDF2_P1_N320"
+    },
+    {
+      "sequence": 24,
+      "repeat": 2,
+      "case": "BDF2_P1_N1280"
+    },
+    {
+      "sequence": 25,
+      "repeat": 2,
+      "case": "BDF3_P2_N80"
+    },
+    {
+      "sequence": 26,
+      "repeat": 2,
+      "case": "BDF4_P3_N80"
+    },
+    {
+      "sequence": 27,
+      "repeat": 2,
+      "case": "BDF4_P3_N1280"
+    },
+    {
+      "sequence": 28,
+      "repeat": 2,
+      "case": "BDF5_P4_N320"
+    },
+    {
+      "sequence": 29,
+      "repeat": 2,
+      "case": "BDF5_P4_N640"
+    },
+    {
+      "sequence": 30,
+      "repeat": 2,
+      "case": "BDF2_P1_N80"
+    },
+    {
+      "sequence": 31,
+      "repeat": 2,
+      "case": "BDF2_P1_N640"
+    },
+    {
+      "sequence": 32,
+      "repeat": 2,
+      "case": "BDF3_P2_N1280"
+    },
+    {
+      "sequence": 33,
+      "repeat": 2,
+      "case": "BDF2_P1_N160"
+    },
+    {
+      "sequence": 34,
+      "repeat": 2,
+      "case": "BDF3_P2_N320"
+    },
+    {
+      "sequence": 35,
+      "repeat": 2,
+      "case": "BDF5_P4_N160"
+    },
+    {
+      "sequence": 36,
+      "repeat": 2,
+      "case": "BDF3_P2_N160"
+    },
+    {
+      "sequence": 37,
+      "repeat": 2,
+      "case": "BDF4_P3_N160"
+    },
+    {
+      "sequence": 38,
+      "repeat": 2,
+      "case": "BDF4_P3_N640"
+    },
+    {
+      "sequence": 39,
+      "repeat": 3,
+      "case": "BDF5_P4_N320"
+    },
+    {
+      "sequence": 40,
+      "repeat": 3,
+      "case": "BDF3_P2_N640"
+    },
+    {
+      "sequence": 41,
+      "repeat": 3,
+      "case": "BDF2_P1_N80"
+    },
+    {
+      "sequence": 42,
+      "repeat": 3,
+      "case": "BDF4_P3_N640"
+    },
+    {
+      "sequence": 43,
+      "repeat": 3,
+      "case": "BDF4_P3_N1280"
+    },
+    {
+      "sequence": 44,
+      "repeat": 3,
+      "case": "BDF2_P1_N160"
+    },
+    {
+      "sequence": 45,
+      "repeat": 3,
+      "case": "BDF3_P2_N1280"
+    },
+    {
+      "sequence": 46,
+      "repeat": 3,
+      "case": "BDF5_P4_N160"
+    },
+    {
+      "sequence": 47,
+      "repeat": 3,
+      "case": "BDF4_P3_N160"
+    },
+    {
+      "sequence": 48,
+      "repeat": 3,
+      "case": "BDF4_P3_N80"
+    },
+    {
+      "sequence": 49,
+      "repeat": 3,
+      "case": "BDF3_P2_N160"
+    },
+    {
+      "sequence": 50,
+      "repeat": 3,
+      "case": "BDF5_P4_N640"
+    },
+    {
+      "sequence": 51,
+      "repeat": 3,
+      "case": "BDF2_P1_N640"
+    },
+    {
+      "sequence": 52,
+      "repeat": 3,
+      "case": "BDF2_P1_N320"
+    },
+    {
+      "sequence": 53,
+      "repeat": 3,
+      "case": "BDF5_P4_N80"
+    },
+    {
+      "sequence": 54,
+      "repeat": 3,
+      "case": "BDF3_P2_N320"
+    },
+    {
+      "sequence": 55,
+      "repeat": 3,
+      "case": "BDF3_P2_N80"
+    },
+    {
+      "sequence": 56,
+      "repeat": 3,
+      "case": "BDF4_P3_N320"
+    },
+    {
+      "sequence": 57,
+      "repeat": 3,
+      "case": "BDF2_P1_N1280"
+    }
+  ]
+}

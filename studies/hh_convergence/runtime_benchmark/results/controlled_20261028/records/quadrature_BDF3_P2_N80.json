@@ -1,0 +1,134 @@
+{
+  "status": "completed",
+  "kind": "quadrature",
+  "case_id": "BDF3_P2_N80",
+  "process_id": 17140,
+  "repeat": null,
+  "sequence": null,
+  "identity": "0f4bc335a0e9f900e7b096ace034bd9b0793f9143c2ff9d282bd5e2f03bd3168",
+  "started_at_utc": "2026-10-29T05:11:26.191273+00:00",
+  "finished_solve_at_utc": "2026-10-29T05:11:30.207059+00:00",
+  "field_case": {
+    "order": 3,
+    "degree": 2,
+    "elements": 80,
+    "dt": 0.0125,
+    "quadrature": 40
+  },
+  "timing": {
+    "solve_wall_seconds": 3.9897419000044465,
+    "solve_cpu_seconds": 3.96875,
+    "loop_wall_seconds": 3.9852339000208303
+  },
+  "environment": {
+    "cpu_model": "12th Gen Intel(R) Core(TM) i5-12400",
+    "logical_cpus": 12,
+    "system": "Windows",
+    "os_release": "11",
+    "os_version": "10.0.26300",
+    "architecture": "AMD64",
+    "python": "3.13.13",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "queried_libraries": [
+      {
+        "package": "numpy",
+        "library": "libscipy_openblas64_-63c857e738469261263c764a36be9436.dll",
+        "thread_query": "scipy_openblas_get_num_threads64_",
+        "threads": 1
+      },
+      {
+        "package": "scipy",
+        "library": "libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+        "thread_query": "scipy_openblas_get_num_threads",
+        "threads": 1
+      }
+    ]
+  },
+  "diagnostics": {
+    "gate_mask_steps": 36,
+    "masked_quadrature_values": 379,
+    "voltage_cutoff_steps": 0,
+    "min_conductance": 0.6332469511050685,
+    "max_relative_linear_residual": 2.5191272167595313e-16,
+    "steps": 3680,
+    "bdf_solves": 3678,
+    "elapsed_seconds": 3.9852339000208303,
+    "voltage_nodal_range": [
+      -11.200889561598059,
+      106.28778790292228
+    ],
+    "gate_nodal_ranges": [
+      [
+        0.013538214535844991,
+        0.9946686684601932
+      ],
+      [
+        0.07559592407848487,
+        0.610516049311953
+      ],
+      [
+        0.3082823215523772,
+        0.7723365428884574
+      ]
+    ],
+    "mask_evaluation": "exact identity fast path; original full-array regularization otherwise"
+  },
+  "source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+  "fresh_solve": true,
+  "warmup_excluded": true,
+  "progress_disabled": true,
+  "errors": {
+    "voltage_error": 21.45705217799857,
+    "voltage_h1_error": 1792.4968290653235,
+    "m_error": 0.2204052885800218,
+    "h_error": 0.07382226057869032,
+    "n_error": 0.06988880562973034,
+    "gate_error": 0.2204052885800218,
+    "voltage_error_time_ms": 46.0,
+    "voltage_h1_error_time_ms": 46.0,
+    "m_error_time_ms": 46.0,
+    "h_error_time_ms": 46.0,
+    "n_error_time_ms": 46.0,
+    "gate_error_time_ms": 46.0
+  },
+  "q8_q16_absolute_differences": {
+    "voltage_error": 3.552713678800501e-15,
+    "voltage_h1_error": 2.9558577807620168e-12,
+    "m_error": 2.7755575615628914e-17,
+    "h_error": 0.0,
+    "n_error": 1.3877787807814457e-17,
+    "gate_error": 2.7755575615628914e-17
+  },
+  "quadrature_changes": {
+    "voltage_error": 9.484577814621082e-07,
+    "voltage_h1_error": 0.00012997048448989217,
+    "m_error": 9.713306706829919e-09,
+    "h_error": 2.8569023780998724e-09,
+    "n_error": 2.62052552199734e-09,
+    "gate_error": 9.713306706829919e-09,
+    "voltage_error_time_ms": 46.0,
+    "voltage_h1_error_time_ms": 46.0,
+    "m_error_time_ms": 46.0,
+    "h_error_time_ms": 46.0,
+    "n_error_time_ms": 46.0,
+    "gate_error_time_ms": 46.0
+  },
+  "quadrature_q8_q16_absolute_differences": {
+    "voltage_error": 6.342040607953958e-16,
+    "voltage_h1_error": 1.659135611016549e-14,
+    "m_error": 1.0528387923799438e-18,
+    "h_error": 2.830803962058573e-18,
+    "n_error": 1.3276298462312847e-18,
+    "gate_error": 1.0528387923799438e-18
+  },
+  "saved_field_directory": "studies/hh_convergence/runtime_benchmark/results/controlled_20261028/quadrature_fields/BDF3_P2_N80"
+}

@@ -1,0 +1,296 @@
+{
+  "description": "Manufactured HH spatial verification on the existing two-junction test graph",
+  "bdf_order": 5,
+  "degree": 4,
+  "dt": 0.005,
+  "final_time": 0.1,
+  "sampled_times": [
+    0.0,
+    0.025,
+    0.05,
+    0.075,
+    0.1
+  ],
+  "assembly_quadrature": 24,
+  "error_quadrature": 40,
+  "coarse_elements_per_edge": [
+    4,
+    5,
+    4,
+    5,
+    4
+  ],
+  "graph": {
+    "vertices": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0,
+        0.0
+      ],
+      [
+        3.0,
+        1.0,
+        0.0
+      ],
+      [
+        2.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "edges": [
+      {
+        "start": 0,
+        "end": 1,
+        "name": "A0",
+        "length": null
+      },
+      {
+        "start": 1,
+        "end": 2,
+        "name": "A1",
+        "length": 1.3
+      },
+      {
+        "start": 1,
+        "end": 3,
+        "name": "A2",
+        "length": null
+      },
+      {
+        "start": 2,
+        "end": 4,
+        "name": "A3",
+        "length": null
+      },
+      {
+        "start": 2,
+        "end": 5,
+        "name": "A4",
+        "length": null
+      }
+    ],
+    "elements_per_edge": [
+      32,
+      40,
+      32,
+      40,
+      32
+    ],
+    "degree": 4,
+    "quadrature_order": 24,
+    "dofs": 705,
+    "h_max": 0.035355339059327376,
+    "reference_nodes": [
+      -1.0,
+      -0.6546536707079773,
+      5.702903427273753e-17,
+      0.6546536707079772,
+      1.0
+    ],
+    "node_family": "Gauss-Lobatto"
+  },
+  "rows": [
+    {
+      "factor": 1,
+      "elements": 22,
+      "dofs": 89,
+      "h": 0.282842712474619,
+      "dt": 0.005,
+      "voltage_error": 0.0004584630260915101,
+      "gate_error": 5.757123291937012e-06,
+      "gate_nodal_error": 6.430549373206906e-07,
+      "voltage_h1_error": 0.03103848198967398,
+      "voltage_rate": null,
+      "gate_rate": null,
+      "voltage_h1_rate": null,
+      "assembly": {
+        "shared_junction_dofs": {
+          "v1": [
+            1,
+            1,
+            1
+          ],
+          "v2": [
+            2,
+            2,
+            2
+          ]
+        },
+        "mass_integral": 5.7142135623730965,
+        "total_metric_length": 5.714213562373095,
+        "mass_symmetry_defect": 0.0,
+        "stiffness_symmetry_defect": 3.552713678800501e-15,
+        "constant_stiffness_residual": 3.5638159090467525e-14,
+        "minimum_nodal_weight": 0.012499999999999989
+      }
+    },
+    {
+      "factor": 2,
+      "elements": 44,
+      "dofs": 177,
+      "h": 0.1414213562373095,
+      "dt": 0.005,
+      "voltage_error": 1.635695249706736e-05,
+      "gate_error": 1.8288724010990675e-07,
+      "gate_nodal_error": 1.2581190849690232e-08,
+      "voltage_h1_error": 0.0018357381212099017,
+      "voltage_rate": 4.808829502260975,
+      "gate_rate": 4.97632178060528,
+      "voltage_h1_rate": 4.07962583119017,
+      "assembly": {
+        "shared_junction_dofs": {
+          "v1": [
+            1,
+            1,
+            1
+          ],
+          "v2": [
+            2,
+            2,
+            2
+          ]
+        },
+        "mass_integral": 5.7142135623730965,
+        "total_metric_length": 5.714213562373095,
+        "mass_symmetry_defect": 0.0,
+        "stiffness_symmetry_defect": 7.105427357601002e-15,
+        "constant_stiffness_residual": 7.127631818093505e-14,
+        "minimum_nodal_weight": 0.006249999999999994
+      }
+    },
+    {
+      "factor": 4,
+      "elements": 88,
+      "dofs": 353,
+      "h": 0.07071067811865475,
+      "dt": 0.005,
+      "voltage_error": 5.385615290783326e-07,
+      "gate_error": 5.738707490756047e-09,
+      "gate_nodal_error": 1.9485812454202676e-10,
+      "voltage_h1_error": 0.00011363098138030486,
+      "voltage_rate": 4.92464899325688,
+      "gate_rate": 4.994084772471705,
+      "voltage_h1_rate": 4.013932121501088,
+      "assembly": {
+        "shared_junction_dofs": {
+          "v1": [
+            1,
+            1,
+            1
+          ],
+          "v2": [
+            2,
+            2,
+            2
+          ]
+        },
+        "mass_integral": 5.714213562373096,
+        "total_metric_length": 5.714213562373095,
+        "mass_symmetry_defect": 0.0,
+        "stiffness_symmetry_defect": 1.4210854715202004e-14,
+        "constant_stiffness_residual": 1.425526363618701e-13,
+        "minimum_nodal_weight": 0.003124999999999997
+      }
+    },
+    {
+      "factor": 8,
+      "elements": 176,
+      "dofs": 705,
+      "h": 0.035355339059327376,
+      "dt": 0.005,
+      "voltage_error": 1.7507941968072018e-08,
+      "gate_error": 1.7951848872042812e-10,
+      "gate_nodal_error": 1.3208216460837653e-12,
+      "voltage_h1_error": 7.084679492663189e-06,
+      "voltage_rate": 4.943029765626532,
+      "gate_rate": 4.998521499402587,
+      "voltage_h1_rate": 4.003509839876017,
+      "assembly": {
+        "shared_junction_dofs": {
+          "v1": [
+            1,
+            1,
+            1
+          ],
+          "v2": [
+            2,
+            2,
+            2
+          ]
+        },
+        "mass_integral": 5.7142135623730965,
+        "total_metric_length": 5.714213562373095,
+        "mass_symmetry_defect": 0.0,
+        "stiffness_symmetry_defect": 2.842170943040401e-14,
+        "constant_stiffness_residual": 2.851052727237402e-13,
+        "minimum_nodal_weight": 0.0015624999999999986
+      }
+    }
+  ],
+  "controls": {
+    "dt_half": {
+      "settings": {
+        "dt": 0.0025
+      },
+      "field_change": {
+        "voltage_error": 1.8440377085391736e-10,
+        "gate_error": 3.976262199296113e-13
+      },
+      "change_over_primary_error": {
+        "voltage_error": 0.01053257836873125,
+        "gate_error": 0.002214959711190816
+      },
+      "below_five_percent": true
+    },
+    "quadrature40": {
+      "settings": {
+        "quadrature": 40
+      },
+      "field_change": {
+        "voltage_error": 8.92604663972092e-14,
+        "gate_error": 5.938951774246396e-16
+      },
+      "change_over_primary_error": {
+        "voltage_error": 5.098284342042436e-06,
+        "gate_error": 3.3082674751654027e-06
+      },
+      "below_five_percent": true
+    }
+  },
+  "error_quadrature40_vs80_relative_change": {
+    "voltage_error": 7.478704554729876e-09,
+    "gate_error": 2.256637109554873e-08,
+    "voltage_h1_error": 7.22758985116608e-10
+  },
+  "error_definitions": {
+    "voltage_error": "maximum sampled continuous voltage L2 error",
+    "gate_error": "maximum over gates and sampled times of continuous L2 error (including interpolation)",
+    "gate_nodal_error": "maximum sampled positive nodal gate error; supplementary only",
+    "voltage_h1_error": "maximum sampled voltage derivative L2 error, an H1 SEMINORM, not the full H1 norm"
+  },
+  "scope": "Manufactured forcing; exact vertex derivatives vanish edgewise. Not a successive-junction physical pulse test.",
+  "source_sha256": {
+    "mesh.py": "f3e1d71356cba69abac3efd6e4f370e70ff561bd3dae87be678962e02fd41c01",
+    "model.py": "b5759fbda7f64e656034f65efe67a9f5d1bd22d776ab1abfc7117d7da6566d26",
+    "solver.py": "6751bd1ce177c147d6125dc42d838db22a1c49e1a7064a5f9e7582b6f49a69bf",
+    "manufactured.py": "1f8ed7c6809d9e1de383509f08ca89834155dfe79b606d1e18de76218b34f4f6",
+    "studies/graph_geometry/verify_geometry.py": "26517a1c85b9cf766dfda08a4efc1b4d04fca4647c45255912cb974974796266",
+    "tests/test_solver.py": "342d5430e4bccad6f7ab92ca2a6514eb3e7ef334e31b8d0c9a6b05c5803ea188"
+  }
+}

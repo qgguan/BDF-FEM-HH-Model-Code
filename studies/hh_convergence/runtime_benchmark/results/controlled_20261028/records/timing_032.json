@@ -1,0 +1,115 @@
+{
+  "status": "completed",
+  "kind": "timing",
+  "case_id": "BDF3_P2_N1280",
+  "process_id": 17672,
+  "repeat": 2,
+  "sequence": 32,
+  "identity": "0f4bc335a0e9f900e7b096ace034bd9b0793f9143c2ff9d282bd5e2f03bd3168",
+  "started_at_utc": "2026-10-29T04:05:29.433968+00:00",
+  "finished_solve_at_utc": "2026-10-29T04:14:16.619701+00:00",
+  "field_case": {
+    "order": 3,
+    "degree": 2,
+    "elements": 1280,
+    "dt": 0.00078125,
+    "quadrature": 24
+  },
+  "timing": {
+    "solve_wall_seconds": 527.1595713999704,
+    "solve_cpu_seconds": 524.28125,
+    "loop_wall_seconds": 527.1237928000046
+  },
+  "environment": {
+    "cpu_model": "12th Gen Intel(R) Core(TM) i5-12400",
+    "logical_cpus": 12,
+    "system": "Windows",
+    "os_release": "11",
+    "os_version": "10.0.26300",
+    "architecture": "AMD64",
+    "python": "3.13.13",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "queried_libraries": [
+      {
+        "package": "numpy",
+        "library": "libscipy_openblas64_-63c857e738469261263c764a36be9436.dll",
+        "thread_query": "scipy_openblas_get_num_threads64_",
+        "threads": 1
+      },
+      {
+        "package": "scipy",
+        "library": "libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+        "thread_query": "scipy_openblas_get_num_threads",
+        "threads": 1
+      }
+    ]
+  },
+  "diagnostics": {
+    "gate_mask_steps": 0,
+    "masked_quadrature_values": 0,
+    "voltage_cutoff_steps": 0,
+    "min_conductance": 0.6331746888572606,
+    "max_relative_linear_residual": 3.1339987843596744e-16,
+    "steps": 58880,
+    "bdf_solves": 58878,
+    "elapsed_seconds": 527.1237928000046,
+    "voltage_nodal_range": [
+      -11.19933078469684,
+      106.22976197543886
+    ],
+    "gate_nodal_ranges": [
+      [
+        0.01353809285277237,
+        0.994626635808576
+      ],
+      [
+        0.07539847171401308,
+        0.6105975259501152
+      ],
+      [
+        0.30825744790353565,
+        0.7721485973795181
+      ]
+    ],
+    "mask_evaluation": "exact identity fast path; original full-array regularization otherwise"
+  },
+  "source_sha256": "aa557a415d26eba3971ef269cb55fcc935f3596b9a6ec817d01dc94781be7a44",
+  "fresh_solve": true,
+  "warmup_excluded": true,
+  "progress_disabled": true,
+  "errors": {
+    "voltage_error": 0.0006742707674459272,
+    "voltage_h1_error": 1.2063292934548708,
+    "m_error": 6.763992162966834e-06,
+    "h_error": 1.916808683005093e-06,
+    "n_error": 1.8228293520762968e-06,
+    "gate_error": 6.763992162966834e-06,
+    "voltage_error_time_ms": 46.0,
+    "voltage_h1_error_time_ms": 46.0,
+    "m_error_time_ms": 46.0,
+    "h_error_time_ms": 46.0,
+    "n_error_time_ms": 46.0,
+    "gate_error_time_ms": 46.0
+  },
+  "q8_q16_absolute_differences": {
+    "voltage_error": 4.5319650809894085e-17,
+    "voltage_h1_error": 5.582201367815287e-13,
+    "m_error": 1.3637230450794235e-18,
+    "h_error": 3.2581122316136663e-18,
+    "n_error": 4.024677048878808e-18,
+    "gate_error": 1.3637230450794235e-18
+  },
+  "historical_field_max_differences": {
+    "voltage": 0.0,
+    "gates": 0.0
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "config": {
+    "bdf_order": 3,
+    "dt": 0.0015625,
+    "final_time": 46.0,
+    "sample_interval": 46.0,
+    "epsilon": 0.001,
+    "voltage_limit": 200.0,
+    "stimulus_amplitude": 100.0
+  },
+  "parameters": {
+    "capacitance": 1.0,
+    "radius": 0.01,
+    "resistivity": 35.4,
+    "g_na": 120.0,
+    "g_k": 36.0,
+    "g_l": 0.3,
+    "e_na": 115.0,
+    "e_k": -12.0,
+    "e_l": null
+  },
+  "mesh": {
+    "vertices": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0
+      ],
+      [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ]
+    ],
+    "edges": [
+      {
+        "start": 0,
+        "end": 1,
+        "name": "trunk",
+        "length": null
+      },
+      {
+        "start": 1,
+        "end": 2,
+        "name": "upper",
+        "length": null
+      },
+      {
+        "start": 1,
+        "end": 3,
+        "name": "lower",
+        "length": null
+      }
+    ],
+    "elements_per_edge": [
+      640,
+      640,
+      640
+    ],
+    "degree": 2,
+    "quadrature_order": 24,
+    "dofs": 3841,
+    "h_max": 0.0015625,
+    "reference_nodes": [
+      -1.0,
+      0.0,
+      1.0
+    ],
+    "node_family": "Gauss-Lobatto"
+  },
+  "diagnostics": {
+    "gate_mask_steps": 0,
+    "masked_quadrature_values": 0,
+    "voltage_cutoff_steps": 0,
+    "min_conductance": 0.6331747071660658,
+    "max_relative_linear_residual": 2.3720654763082543e-16,
+    "steps": 29440,
+    "bdf_solves": 29438,
+    "elapsed_seconds": 177.3361335999798,
+    "voltage_nodal_range": [
+      -11.199330201519803,
+      106.22965858249573
+    ],
+    "gate_nodal_ranges": [
+      [
+        0.013538092590892064,
+        0.994626659067109
+      ],
+      [
+        0.0754091843561614,
+        0.610597075482838
+      ],
+      [
+        0.30825745170034125,
+        0.7721460064283799
+      ]
+    ],
+    "mask_evaluation": "exact identity fast path; original full-array regularization otherwise"
+  },
+  "leak_reversal_used": 10.598920969391683,
+  "gate_order": [
+    "m",
+    "h",
+    "n"
+  ],
+  "scheme": "IMEX BDF3+P2"
+}

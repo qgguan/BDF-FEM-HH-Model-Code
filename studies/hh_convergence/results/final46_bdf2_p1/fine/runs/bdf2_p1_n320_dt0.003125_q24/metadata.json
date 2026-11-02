@@ -1,0 +1,115 @@
+{
+  "config": {
+    "bdf_order": 2,
+    "dt": 0.003125,
+    "final_time": 46.0,
+    "sample_interval": 46.0,
+    "epsilon": 0.001,
+    "voltage_limit": 200.0,
+    "stimulus_amplitude": 100.0
+  },
+  "parameters": {
+    "capacitance": 1.0,
+    "radius": 0.01,
+    "resistivity": 35.4,
+    "g_na": 120.0,
+    "g_k": 36.0,
+    "g_l": 0.3,
+    "e_na": 115.0,
+    "e_k": -12.0,
+    "e_l": null
+  },
+  "mesh": {
+    "vertices": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0
+      ],
+      [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ]
+    ],
+    "edges": [
+      {
+        "start": 0,
+        "end": 1,
+        "name": "trunk",
+        "length": null
+      },
+      {
+        "start": 1,
+        "end": 2,
+        "name": "upper",
+        "length": null
+      },
+      {
+        "start": 1,
+        "end": 3,
+        "name": "lower",
+        "length": null
+      }
+    ],
+    "elements_per_edge": [
+      320,
+      320,
+      320
+    ],
+    "degree": 1,
+    "quadrature_order": 24,
+    "dofs": 961,
+    "h_max": 0.003125,
+    "reference_nodes": [
+      -1.0,
+      1.0
+    ],
+    "node_family": "Gauss-Lobatto"
+  },
+  "diagnostics": {
+    "gate_mask_steps": 0,
+    "masked_quadrature_values": 0,
+    "voltage_cutoff_steps": 0,
+    "min_conductance": 0.6332005542999344,
+    "max_relative_linear_residual": 1.786080126735055e-16,
+    "steps": 14720,
+    "bdf_solves": 14719,
+    "elapsed_seconds": 137.3133132000221,
+    "voltage_nodal_range": [
+      -11.200936644951861,
+      106.32079509754215
+    ],
+    "gate_nodal_ranges": [
+      [
+        0.013536112994259603,
+        0.9947039100007392
+      ],
+      [
+        0.07559558649163053,
+        0.6105996825119656
+      ],
+      [
+        0.308263324289287,
+        0.7727785319628147
+      ]
+    ]
+  },
+  "leak_reversal_used": 10.598920969391683,
+  "gate_order": [
+    "m",
+    "h",
+    "n"
+  ],
+  "scheme": "IMEX BDF2+P1"
+}
