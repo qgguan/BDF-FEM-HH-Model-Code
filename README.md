@@ -3,9 +3,25 @@
 This repository contains the numerical code and selected data used in
 Hayden Reed and Qingguang Guan, *High-Order Unconditionally Stable IMEX
 BDF–FEM Schemes for the Hodgkin–Huxley Model on a Branched Axon*.
-The [paper PDF](BDF-FEM-HH-Model.pdf) is included in this repository.
+The paper is available on [arXiv (arXiv:2611.02423)](https://arxiv.org/abs/2611.02423).
 The code implements the masked, linearly implicit BDF–FEM family for
 orders 1–5 and the finite element degrees used in the paper (P1–P4).
+
+## Citation
+
+If you use this code in your research, please cite the accompanying paper:
+
+```bibtex
+@misc{reed2026highorder,
+  title         = {{High-Order Unconditionally Stable IMEX BDF--FEM Schemes for the Hodgkin--Huxley Model on a Branched Axon}},
+  author        = {Reed, Hayden and Guan, Qingguang},
+  year          = {2026},
+  eprint        = {2611.02423},
+  archivePrefix = {arXiv},
+  primaryClass  = {math.NA},
+  url           = {https://arxiv.org/abs/2611.02423}
+}
+```
 
 ## Setup
 
